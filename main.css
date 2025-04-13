@@ -8,3 +8,21 @@ div a {
     width: fit-content;
     color: black;
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .abdo {
+    background-color: #232f3e;
+    padding: 10px 20px;
+  }
+  
+  .abdo1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
