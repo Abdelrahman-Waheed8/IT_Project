@@ -1,0 +1,10 @@
+div a {
+    text-decoration: none;
+    font-size: 35px;
+    font-family: "Jomhuria" serif;
+    font-weight: 400;
+    background-color: turquoise;
+    border: rgb(34, 126, 117) solid 3px;
+    width: fit-content;
+    color: black;
+}
