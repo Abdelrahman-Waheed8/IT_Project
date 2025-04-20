@@ -1,4 +1,11 @@
 
+*{
+
+    box-sizing: border-box;
+
+}
+
+
 :root {
     --main-color : rgb(32 109 201);
     --secondary-color : rgb(255 182 7);
@@ -14,7 +21,51 @@ html {
 
 .container{
 
-    text-align: center;
-    border: solid gray;
+    display: flex;
+    justify-content: center;    
+    box-shadow: 1px 1px 10px #000000;
+    border-radius: 10px;
+    background: rgb(245 246 250);
+    width: 400px;
+    transition: 0.7s;
+    margin: 10px;
+    padding: 20px; 
+    color: rgb(32 109 201);
 }
+
+.h{
+
+    text-align: center;
+}
+
+.forgot{
+    display: inline-block;
+    display: flex;
+    justify-content: center;    
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+.btn{    
+    text-align: center;
+    
+}
+
+.btn button{
+
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    width: 172.12px;
+    background: rgb(32 109 201);
+    border: none;
+}
+
+.input{
+
+    margin-bottom: 10px;    
+}
+
 
