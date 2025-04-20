@@ -1,15 +1,20 @@
-/* Start Variables */ 
+
 :root {
     --main-color : rgb(32 109 201);
     --secondary-color : rgb(255 182 7);
     --background-color : rgb(245 246 250);
 }
-/* End Variables */ 
-/* Start Components */
+
 body {
     font-family: "Oswald", sans-serif;
 }
 html {
     scroll-behavior: smooth;
 }
-/* End Componenets */
+
+.container{
+
+    text-align: center;
+    border: solid gray;
+}
+
