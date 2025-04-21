@@ -1,1 +1,230 @@
+/* Start Global Rules */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --login-form-color : rgb(32 109 201);
+    --login-form-secondary-color : rgb(255 182 7);
+    --background-color : rgb(234, 234, 236);
+    --main-transition-duration : 0.4s;
+}
+body {
+    font-family: "Oswald", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* End Global Rules */
 
+/* Start Header */
+header {
+    position: relative;
+    z-index: 10;
+}
+header .header-container {
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+    height: 90px;
+    background-color: var(--login-form-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+
+header .header-container .logo {
+    display: inline-block;
+}
+header .header-container .logo p {
+    padding: 10px 0 10px 80px;;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+}
+header .links .main-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header .links .main-list li {
+    font-size: 25px;
+    color: white;
+    transition: var(--main-transition-duration);
+}
+header .links .main-list li:hover {
+    cursor: pointer;
+    color: #000000;
+}
+.has-dropdown {
+    position: relative;
+}
+.has-dropdown .list {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px 0;
+    min-width: 170px;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.has-dropdown:hover .list {
+    list-style: none;
+    display: block;
+}
+.has-dropdown .list li {
+    padding: 10px 20px;
+    color: var(--login-form-color);
+}
+.has-dropdown .list li:hover {
+    background-color: var(--background-color);
+}
+.has-dropdown .list li a {
+    padding: 5px;
+    margin-bottom: 5px;
+    color: var(--login-form-color);
+    text-decoration: none;
+    display: block;
+}
+.has-dropdown .list li:not(:last-child) a {
+    border-bottom: 2px solid rgb(212, 209, 209);
+}
+.has-dropdown:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent white transparent;
+    border-width: 20px;
+    border-style: solid;
+    z-index: 999;
+}
+/* End Header */
+
+/* Start Login Form */
+.container{
+    position: relative;
+    top: 590px; /* Push it down */
+    left: 400px; /* Push it to the right */
+    transform: translate(0, 0);
+    display: flex;
+    justify-content: center;
+    background: var(--background-color);
+    width: 800px;
+    height: 360px;
+    transition: var(--main-transition-duration);
+    padding: 20px;
+    color: var(--login-form-color);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.forgot{
+    color: var(--login-form-color);
+    display: flex;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-bottom: 25px;
+    transition: var(--main-transition-duration);
+}
+.forgot:hover{
+    color: var(--login-form-secondary-color);
+    cursor: pointer;
+}
+.btn{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn button{
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2em;
+    font-weight: 800;
+    width: 100%;
+    background: rgb(32 109 201);
+    border: solid;
+    border-radius: 10px;
+    transition : var(--main-transition-duration);
+    padding: 6px;
+}
+.btn button:hover{
+    border: none;
+    color: black;
+    background: rgb(255 182 7) ;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.input input::placeholder {
+    color: var(--login-form-color);
+    opacity: 0.5;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.6px;
+}
+.input input{
+    height: 33px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+.container .remember .label {
+    position: absolute;
+    right: 245px;
+    top: 225px;
+    cursor: pointer;
+}
+/* End Login Form */
+/* Start Landing Page */ 
+.landing-page .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 590px;
+    background-color: rgb(74, 139, 219);
+    opacity: 0.7;
+    z-index: 1;
+}
+.landing-page {
+    background-image: url(https://cdn.cosmos.so/3015f39e-58d6-4780-ad48-e15f5349a238?format=jpeg);
+    background-repeat : repeat;
+    width: 100%;
+    height: 590px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -360px;
+}
+.landing-page .text {
+    position: relative; 
+    z-index: 3; 
+    color: var(--background-color);
+}
+.landing-page .text h1 {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 60px;
+    text-align: center;
+    font-weight: 800;
+    z-index: 3;
+}
+.landing-page .text p {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    text-align: center;
+    z-index: 3;
+}
+/* End Landing Page */ 
