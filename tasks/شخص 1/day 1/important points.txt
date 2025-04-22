@@ -1,3 +1,5 @@
-1-Changed The Position Of Login Container And Adjusted The Width And Height of the Inputs and the login button
-2-Created a Navbar With Four links and the Categories Link Contains A drop down with the categories of our website (can be changed later)
-3-Image with a greeting to our website (can change the image later)
+1-Fixed The Responsive in the login page
+2-Added A Home Page With a new font and theme with a shopping cart button that sends you to another page
+3-Added Shopping Cart Page 
+4- NOT DONE :
+    Responsive for both home page and shopping cart page
