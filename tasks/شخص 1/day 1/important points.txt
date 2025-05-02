@@ -1,5 +1,0 @@
-1-Fixed The Responsive in the login page
-2-Added A Home Page With a new font and theme with a shopping cart button that sends you to another page
-3-Added Shopping Cart Page 
-4- NOT DONE :
-    Responsive for both home page and shopping cart page
