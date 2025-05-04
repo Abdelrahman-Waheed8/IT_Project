@@ -25,7 +25,7 @@
           <!-- شريط البحث -->
           <div class="search-bar">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="search" class="input-search">
+              <input type="search" class="input-search" placeholder="البحث"oninput="search()">
           </div>
       </div>
 
@@ -77,7 +77,7 @@
                     <span id="text">1854</span>
                 </div>
             </div>
-
+            
             <div id="container"data-id="3">
                 <img  src="https://www.noor-book.com/publice/covers_cache_webp/1/0/b/a/c6b26330780ba452472ef0bf723865ae.jpg.webp" alt="Book Image">
                 <hr>
@@ -388,6 +388,37 @@ document.getElementById("scrollTop").onclick = function() {
     behavior: "smooth"
   });
 };
+function search() {
+let searchTerm = document.querySelector('.input-search').value.toUpperCase();
+let books = document.querySelectorAll('[data-id]');
+if (searchTerm === '') {
+    // إذا كان  البحث فاضي ، اعرض جميع الكتب
+    books.forEach(book => {
+        book.style.display = "";
+    });
+    return;
+}
+books.forEach(book => {
+    let bookName = book.querySelector('#Name').textContent.toUpperCase();
+    let authorName = book.querySelector('#NameWriter').textContent.toUpperCase();
+    // عرض الكتاب إذا تطابق اسمه أو اسم الشيخ مع الكلام اللي مكتوب ف البحث
+    if (bookName.includes(searchTerm) || authorName.includes(searchTerm)) {
+        book.style.display = "";
+    } else {
+        book.style.display = "none";
+    }
+});
+// لو الاسم مش مطابق لاسم أي  كتاب او لاسم الشيخ هيطبع رساله فوق
+let hasResults = false;
+books.forEach(book => {
+    if (book.style.display !== "none") {
+        hasResults = true;
+    }
+});
+if (!hasResults) {
+    alert("لا توجد نتائج مطابقة للبحث");
+}
+}
     </script>
 </body>
 </html>
