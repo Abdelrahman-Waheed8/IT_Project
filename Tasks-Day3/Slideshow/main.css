@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #0f0f0f;
+    --gold-color: #cfa54b;
+    --light-bg: #f8f4e8;
+    --border-color: #d4af37;
+    --MainColor: #0f0f0f;
+    --SeconderyColor: #FFC805;
+    --ThirdColor: #EDB900;
+    --FourthColor: #6d6d6d;
+    --FifthColor: #c9c9c9;
+    --sixthColor: #e3e3e3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Aref Ruqaa", serif;
+    background-color: var(--light-bg);
+    color: var(--main-color);
+    padding: 20px;
+    direction: rtl;
+
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2345678904567890;
+    height: 80px;
+    grid-area: header;
+    background-color: #e7c16f;
+    color: var(--MainColor);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+/* تنسيق الهيدر ليحتوي على العناصر بشكل أفقي متباعد */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* تنسيق الجزء الخاص باللوجو والعنوان والبحث */
+
+.logo i{
+    color: var(--ThirdColor);
+    font-size: 24px;
+}
+/* تنسيق أيقونة الكتاب */
+
+.logo h1{
+    font-size: 35px;
+    white-space: nowrap;
+}
+/* تنسيق العنوان بجانب الأيقونة */
+
+
+header .link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header .link a {
+    text-decoration: none;
+    color: var(--MainColor);
+    font-size: 35px;
+    transition: 0.6s;
+    white-space: nowrap;
+    padding: 0 30px;
+}
+
+header .link a:last-child {
+    margin-left: 100px;
+}
+
+header .link a:hover{
+    color: var(--FourthColor);
+}
+.menu-buttons {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--MainColor);
+    margin-right: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 125px !important;
+      padding: 10px;
+    }
+  
+    .logo {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+  
+    .logo i {
+      display: none;
+    }
+  
+    .logo{
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .logo h1 {
+      font-size: 30px !important;
+      margin-left: -40px;
+    }
+  
+    .link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  
+    .link a {
+      font-size: 18px !important;
+      padding: 0px;
+      margin: 2px;
+    }
+  }
+@media (min-width: 901px) {
+    .link a {
+        padding: 0 50px;
+    }
+}
+
+.slider-container {
+    max-width: 800px;
+    margin: 100px auto;
+    position: relative;
+    height: 90vh;
+}
+
+.slider-wrapper {
+    position: relative;
+    height: calc(100% - 70px);
+    overflow: hidden;
+}
+
+.book-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.book-content.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.book-content img {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid var(--gold-color);
+}
+
+.book-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-info h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.book-info .author {
+    font-size: 20px;
+    color: #555;
+}
+
+.book-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    background: none;
+    border: 1px solid var(--gold-color);
+    color: var(--gold-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.action-btn:hover {
+    background-color: var(--gold-color);
+    color: white;
+}
+
+.slider-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.nav-btn {
+    background-color: var(--gold-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.page-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-color);
+    background: none;
+    color: var(--gold-color);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-btn.active {
+    background-color: var(--gold-color);
+    color: white;
+}
+
+.page-btn:hover:not(.active) {
+    background-color: rgba(207, 165, 75, 0.2);
+}
+.book-content {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(20px);
+}
+
+.book-content.active {
+    opacity: 1;
+    z-index: 10;
+    transform: translateX(0);
+}

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --MainColor: #0f0f0f;
+    --SeconderyColor: #FFC805;
+    --ThirdColor: #EDB900;
+    --FourthColor: #6d6d6d;
+    --FifthColor: #c9c9c9;
+    --sixthColor: #e3e3e3;
+}
+body{
+    direction: rtl;
+    font-family: "Aref Ruqaa", serif;
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+    height: 100vh;
+    grid-template-areas: 
+        "header header header header header "
+        "main main main main main"             
+        "footer footer footer footer footer"
+    ;
+}
+
+header{
+    height: 80px;
+    grid-area: header;
+    background-color: var(--MainColor);
+    color: var(--sixthColor);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/* تنسيق الهيدر ليحتوي على العناصر بشكل أفقي متباعد */
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding:20px ;
+    margin-left: 10px;
+}
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      height: 120px !important;
+    }
+  
+    .logo {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+  
+    .logo i {
+      display: none;
+    }
+  
+    .logo{
+      display: flex ;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .logo h1 {
+      font-size: 30px !important;
+    }
+  
+    .link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  
+    .link a {
+      text-align: center;
+      font-size: 14px !important;
+      padding: 0px;
+      margin: 2px;
+    }
+  }
+/* تنسيق الجزء الخاص باللوجو والعنوان والبحث */
+
+.logo i{
+    color: var(--ThirdColor);
+    margin-left: 10px;
+}
+/* تنسيق أيقونة الكتاب */
+
+.logo h1{
+    margin-left: 20px;
+    font-size: 35px;
+    width: 200px;
+}
+/* تنسيق العنوان بجانب الأيقونة */
+
+.search-bar{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    width: 700px;
+    height: 40px;
+}
+/* تنسيق صندوق البحث */
+
+.search-bar input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 10px;
+    color:#fff;
+    width: 80%;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* تنسيق خانة إدخال البحث */
+
+.search-bar i{
+    margin-right: 15px;
+}
+/* تنسيق أيقونة البحث */
+
+.link a{
+    text-decoration: none;
+    /* margin-right: 20px; */
+    padding-left: 70px;
+    color: var(--sixthColor);
+    border: 2px solid transparent;
+    font-size: 30px;
+    transition: 0.6s;
+}
+.link a:last-child {
+    margin-left: 40px ;
+}
+/* تنسيق الروابط في الهيدر */
+
+.link a:hover{
+    color: var(--FourthColor);
+}
+
+.container main {
+    grid-area: main;
+    padding-top: 80px; 
+}
+.about-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--sixthColor);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    font-size: 30px;
+    font-weight: 800;
+    text-align:center;
+    margin-bottom: 20px;
+}
+.about-table th,
+.about-table td {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--MainColor);
+}
+
+.about-table th {
+    background-color: var(--ThirdColor);
+    color: var(--MainColor);
+}
+
+.about-table tr:nth-child(even) {
+    background-color: var(--FifthColor);
+}
+.about-table tr {
+    transition: 0.4s;
+}
+.about-table tr:hover {
+    background-color: var(--ThirdColor);
+}
+
+.foot-container{
+    grid-area: footer;
+    width: 100vw;
+    background-color: var(--MainColor);
+    overflow: hidden;    
+}
+
+.foot-content1{
+    width: 50%;
+    float: right;
+    text-align: center;
+    font-family: "Aref Ruqaa", serif;
+}
+
+.foot-title{
+    font-size: 50px;
+    color: #e3e3e3;
+    margin-bottom: 10px;
+}
+
+.foot-p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.foot-a{
+    text-decoration: none;
+    color: var(--sixthColor);
+    transition: 0.6s;
+}
+
+.foot-a-i {
+    text-decoration: none;
+}
+.foot-a:hover {
+    color: var(--SeconderyColor);
+}
+.foot-a-i i{
+    color:var(--sixthColor) ;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: 0.6s;
+}
+.foot-a-i i:hover {
+    color: var(--SeconderyColor);
+}
