@@ -137,37 +137,59 @@ header{
     opacity: 0;
     transition: 0.3s;
 }
-@media (min-width: 768px) {
-    .menu-buttons {
-        visibility: visible;
-        opacity: 1;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        width: 100%;
     }
-    .logo {
-        flex-direction: row;
-        align-items: center;
-    }
+
 
     .logo h1 {
-        font-size: 35px;
-    }
-
-    .search-bar {
-        width: 400px;
-    }
-
-    .search-bar input {
-        font-size: 18px;
+        font-size: 28px;
     }
 
     .link {
-        display: flex;
-        gap: 15px;
-        margin-right: 30px;
+        flex-direction: row;
+        gap: 20px;
     }
 
     .link a {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .link a:first-child {
+        margin-right: 100px !important;
+    }
+    main {
+        padding: 10px 20px;
+    }
+
+    main h2 {
         font-size: 30px;
-        padding: 0;
+    }
+
+    .foot-container {
+        width: 100%;
+    }
+
+    .foot-content1 {
+        width: 100%;
+        float: none;
+    }
+
+    .foot-title {
+        font-size: 40px;
+    }
+
+    .foot-p {
+        font-size: 18px;
+    }
+
+    .foot-a-i i {
+        font-size: 25px;
     }
 }
 
