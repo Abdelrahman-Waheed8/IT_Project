@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" href="../images/favicon2.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>عرض الكتب | التنقل</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- أيقونة الكتاب -->
+            <i class="fa-solid fa-book"></i>
+  
+            <!-- اسم الموقع -->
+            <h1 class="h1">المكتبة الاسلامية</h1>
+  
+        </div>
+  
+        <!-- روابط التنقل -->
+        <div class="link">
+            <a href="../home/index.html">الرجوع <i class="fa-solid fa-arrow-left"> </i> </a>
+        </div>
+    </header>
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="book-content active">
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/3/b/6/2/277b87d65ab623e3b228d355b7322ae6.jpg.webp" alt="رياض الصالحين">
+                <div class="book-info">
+                    <h3>رياض الصالحين</h3>
+                    <p class="author">الإمام النووي</p>
+                </div>
+                <div class="book-actions">
+                    <button class="action-btn" onclick="window.location.href = '../product-pages/Book15.html'">تصفح الكتاب</button>
+                </div>
+            </div>
+            
+            <div class="book-content">
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/3/4/4/d6094a21603440247c04e3219b5a1788.jpg.webp" alt="الفقه الميسر">
+                <div class="book-info">
+                    <h3>الفقه الميسر</h3>
+                    <p class="author">نخبة من العلماء</p>
+                </div>
+                <div class="book-actions">
+                    <button class="action-btn" onclick="window.location.href = '../product-pages/Book14.html'">تصفح الكتاب</button>
+                </div>
+            </div>
+            
+            <div class="book-content">
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/13/a/c/3/380cb7ae7cac36661a30db36d7fbebe1.png.webp" alt="ثلاثة الأصول">
+                <div class="book-info">
+                    <h3>ثلاثة الأصول</h3>
+                    <p class="author">محمد بن عبدالوهاب</p>
+                </div>
+                <div class="book-actions">
+                    <button class="action-btn" onclick="window.location.href = '../product-pages/Book13.html'">تصفح الكتاب</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-navigation">
+            <button class="nav-btn prev-btn"><i class="fas fa-chevron-right"></i> السابق</button>
+            <div class="pagination">
+                <button class="page-btn active"data-index="0">1</button>
+                <button class="page-btn"data-index="1">2</button>
+                <button class="page-btn"data-index="2">3</button>
+            </div>
+            <button class="nav-btn next-btn">التالي <i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+
+    <script src="scripting.js"></script>
+</body>
+</html>

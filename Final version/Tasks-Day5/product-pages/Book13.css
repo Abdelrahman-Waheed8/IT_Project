@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Cairo:wght@200..1000&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Noto+Kufi+Arabic:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --MainColor: #0f0f0f;
+  --SeconderyColor: #ffc805;
+  --ThirdColor: #edb900;
+  --FourthColor: #6d6d6d;
+  --FifthColor: #c9c9c9;
+  --sixthColor: #e3e3e3;
+}
+body {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-image: url(https://img.freepik.com/free-vector/realistic-three-dimensional-arabic-ornamental-background_52683-58623.jpg?t=st=1746450618~exp=1746454218~hmac=4e71c9b30f9b8d52c1f03b9d1ddba0c0fcbac5885cc7306449317f8888163cf8&w=996);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--MainColor);
+  color: var(--sixthColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* تنسيق الهيدر ليحتوي على العناصر بشكل أفقي متباعد */
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-left: 10px;
+}
+/* تنسيق الجزء الخاص باللوجو والعنوان والبحث */
+
+.logo i {
+  color: var(--ThirdColor);
+  margin-left: 10px;
+}
+/* تنسيق أيقونة الكتاب */
+
+.logo h1 {
+  margin-left: 20px;
+  font-size: 35px;
+  width: 200px;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .logo i {
+    display: none;
+  }
+
+  .logo{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo h1 {
+    font-size: 30px !important;
+    margin-left: -40px;
+  }
+
+  .search-bar {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .link a {
+    font-size: 18px !important;
+    padding: 0px;
+    margin: 2px;
+  }
+
+  .container-img {
+    width: 90vw !important;
+  }
+}
+/* تنسيق العنوان بجانب الأيقونة */
+
+.search-bar {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  width: 500px;
+  height: 40px;
+}
+/* تنسيق صندوق البحث */
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 10px;
+  color: #fff;
+  width: 80%;
+  font-family: "Aref Ruqaa", serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.link a {
+  text-decoration: none;
+  /* margin-right: 20px; */
+  padding-left: 50px;
+  color: var(--sixthColor);
+  border: 2px solid transparent;
+  font-size: 30px;
+  transition: 0.6s;
+}
+/* تنسيق الروابط في الهيدر */
+
+.link a:hover {
+  color: var(--SeconderyColor);
+}
+/* تنسيق parent بتاع الصوره*/
+
+.container-img {
+  position: relative;
+  width: 50%;
+  height: 80vh;
+  border: 2px solid wheat;
+  border-radius: 30px;
+  margin: 5px 20px 5px auto;
+  box-shadow: 0 0 30px;
+  background-color: wheat;
+  grid-area: main;
+  overflow-y: auto;
+  display: flex;
+}
+
+.container-img::-webkit-scrollbar{
+
+  width : 1px;
+}
+
+/*تنسيق الصوره نفسها*/
+.container-img img {
+  border-radius: 10px;
+  position: absolute;
+  height: 250px;
+  top: 10px;
+  right: 15px;
+}
+
+.container button{
+
+  align-self: end;
+  margin-right: 33px;
+  margin-bottom: 140px;
+  padding: 15px;
+  border: 1px solid var(--MainColor);
+  border-radius: 20px;
+  background-color: var(--MainColor);
+  color: var(--sixthColor);
+  transition: 0.5s;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  animation: button infinite 1s 1s linear alternate-reverse;
+}
+
+.container button:hover{
+
+  background-color: gold;
+  color: var(--MainColor);
+  border-radius: 20px;
+  cursor: pointer;
+  scale: 1.03;
+}
+/*  وصف الكتاب */
+.div13-describtion {
+  position: absolute;
+  right: 210px;
+  top: 30px;
+}
+.span13-describtion {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 33px;
+  letter-spacing: 0.1px;
+  font-family: "Noto Kufi Arabic", sans-serif;
+}
+.h1-13-describtion {
+  text-align: center;
+  font-size: 50px;
+  margin-top: -30px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: (6, 1fr);
+  gap: 15px;
+  height: 100vh;
+  grid-template-areas:
+    "header header header header header "
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "main main main main main"
+    "footer footer footer footer footer";
+}
+footer {
+  grid-area: footer;
+  background-color: var(--FourthColor);
+}
+.foot-container {
+  background-color: var(--MainColor);
+  overflow: auto;
+}
+
+.foot-content1 {
+  width: 50%;
+  float: right;
+  text-align: center;
+  font-family: "Aref Ruqaa", serif;
+}
+
+.foot-title {
+  font-size: 50px;
+  color: #e3e3e3;
+  margin-bottom: 10px;
+}
+
+.foot-p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.foot-a {
+  text-decoration: none;
+  color: var(--sixthColor);
+  transition: 0.6s;
+}
+
+.foot-a-i {
+  text-decoration: none;
+}
+.foot-a:hover {
+  color: var(--SeconderyColor);
+}
+.foot-a-i i {
+  color: var(--sixthColor);
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: 0.6s;
+}
+.foot-a-i i:hover {
+  color: var(--SeconderyColor);
+}
