@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@200..1000&family=Noto+Kufi+Arabic:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    overflow: hidden;
+    font-family: "Cairo", sans-serif;
+}
+
+
+.containerofcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+.cardoflog{
+    border-radius: 40px;    
+    color: rgb(218 178 82);
+    width: 500px;
+    height: 550px;    
+    justify-items: center;
+    transition: 0.7s;
+    z-index: 5;
+    box-shadow: 1px 1px 10px rgb(218 178 82);
+    padding: 10px;
+}
+
+.cardoflog #head{
+    border-radius: 60px;
+    padding: 10px 40px;
+    font-size: 40px;
+    transition: 0.3s;
+    font-weight: 800;
+}
+
+.cardoflog #head:hover{
+    translate: 0 2px;
+    cursor: pointer;
+}
+
+.cardoflog form i{
+    margin-left: 8px;
+    scale: 1.5;
+}
+
+.cardoflog form{
+    direction: rtl;
+    font-size: 18px;
+    padding: 40px;    
+    text-align: center;
+}
+
+.cardoflog form input{
+
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: black;
+    color: rgb(218 178 82);
+    font-family: 'cairo', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: none;
+    box-shadow: 1px 1px 5px rgb(218 178 82);
+    width: 230px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.cardoflog form input:hover{
+    translate: -4px 0;
+}
+
+::placeholder{
+    scale: 1.2;
+    padding: 18px;
+    color: rgb(218 178 82);
+}
+
+
+form button{
+    border: none;
+    box-shadow: 1px 1px 4px 1px rgb(185, 161, 50);
+    border-radius: 60px;
+    padding: 8px 40px;
+    font-size: 22px;
+    font-family: 'cairo', sans-serif;
+    transition: 0.5s;
+    background-color: rgb(218 178 82);
+    color: black;
+}
+
+form button:hover{
+    scale: 1.02;
+    cursor: pointer;
+    background-color: black;    
+    color: rgb(218 178 82);
+}
+
+form #register{
+    margin-top: 30px;
+}
+
+form #register a{
+    text-decoration: none;
+    color: rgb(218 178 82);
+    transition: 0.3s;
+}
+
+form #register a:hover{
+    color:cornsilk;
+}
+
+#img1{
+    Animation: animate 20s linear infinite;
+    position: absolute;
+    bottom: -350px;
+    left: -350px;
+}
+
+#img2{
+    Animation: animate 20s linear infinite;
+    position: absolute;
+    top: -350px;
+    right: -350px;
+}
+#Background2{
+    opacity: 0.1;
+    z-index: 0.6;
+    position: absolute;
+    right: 90px;
+    left: 90px;
+    width: 100vw;
+}
+.input-control.success input {
+    border: 1px solid !important;
+    box-shadow: 1px 1px 4px 1px #09c372!important;
+    border-color: #09c372 !important;
+}
+
+.input-control.error input {
+    border: 1px solid !important;
+    box-shadow: 1px 1px 4px 1px #ff3860!important;
+    border-color: #ff3860 !important;
+}
+.input-control .error {
+    margin-top : -10px;
+    color: #ff3860;
+    font-size: 14px;
+}
+
+@keyframes animate {
+
+    0%{
+        rotate: 0;
+    }
+
+    100%{
+
+        rotate: 360deg;
+    }
+    
+}
